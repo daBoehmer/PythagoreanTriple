@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <grid version="3">
+    <saveoptions create="False" position="False" content="True"/>
+    <content>
+      <cells cellcount="9">
+        <cell1 column="0" row="0" text="Triple Nr."/>
+        <cell2 column="0" row="1" text="1"/>
+        <cell3 column="0" row="2" text="2"/>
+        <cell4 column="0" row="3" text="3"/>
+        <cell5 column="0" row="4" text="4"/>
+        <cell6 column="1" row="0" text="a"/>
+        <cell7 column="2" row="0" text="b"/>
+        <cell8 column="3" row="0" text="c"/>
+        <cell9 column="4" row="0" text="Reason"/>
+      </cells>
+    </content>
+  </grid>
+</CONFIG>

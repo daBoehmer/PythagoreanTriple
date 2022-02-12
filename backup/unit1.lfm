@@ -1,0 +1,380 @@
+object Form1: TForm1
+  Left = 246
+  Height = 597
+  Top = 125
+  Width = 765
+  Caption = 'Pythagorean Triple Generator'
+  ClientHeight = 597
+  ClientWidth = 765
+  Constraints.MaxHeight = 597
+  Constraints.MaxWidth = 765
+  Constraints.MinHeight = 597
+  Constraints.MinWidth = 765
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object strGrid: TStringGrid
+    Left = 9
+    Height = 332
+    Top = 232
+    Width = 749
+    AutoAdvance = aaDown
+    AutoEdit = False
+    AutoFillColumns = True
+    GridLineWidth = 2
+    RowCount = 1
+    TabOrder = 0
+    ColWidths = (
+      69
+      169
+      169
+      169
+      169
+    )
+    Cells = (
+      5
+      0
+      0
+      'Triple Nr.'
+      1
+      0
+      'a'
+      2
+      0
+      'b'
+      3
+      0
+      'c'
+      4
+      0
+      'Reason'
+    )
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 149
+    Top = 7
+    Width = 273
+    Caption = 'Range Constraints'
+    ClientHeight = 125
+    ClientWidth = 269
+    Constraints.MaxHeight = 149
+    Constraints.MaxWidth = 273
+    Constraints.MinHeight = 149
+    Constraints.MinWidth = 273
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    object labEd_upperLimit: TLabeledEdit
+      Left = 112
+      Height = 27
+      Top = 72
+      Width = 112
+      Alignment = taRightJustify
+      EditLabel.Height = 18
+      EditLabel.Width = 89
+      EditLabel.Caption = 'Upper Limit: '
+      EditLabel.ParentColor = False
+      EditLabel.ParentFont = False
+      EditLabel.Font.CharSet = ANSI_CHARSET
+      EditLabel.Font.Color = clBlack
+      EditLabel.Font.Height = -16
+      EditLabel.Font.Name = 'Arial'
+      EditLabel.Font.Pitch = fpVariable
+      EditLabel.Font.Quality = fqDraft
+      LabelPosition = lpLeft
+      TabOrder = 0
+      Text = '60'
+    end
+    object labEd_lowerLimit: TLabeledEdit
+      Left = 112
+      Height = 27
+      Top = 24
+      Width = 112
+      Alignment = taRightJustify
+      EditLabel.Height = 18
+      EditLabel.Width = 89
+      EditLabel.Caption = 'Lower Limit: '
+      EditLabel.ParentColor = False
+      EditLabel.ParentFont = False
+      EditLabel.Font.CharSet = ANSI_CHARSET
+      EditLabel.Font.Color = clBlack
+      EditLabel.Font.Height = -16
+      EditLabel.Font.Name = 'Arial'
+      EditLabel.Font.Pitch = fpVariable
+      EditLabel.Font.Quality = fqDraft
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      LabelPosition = lpLeft
+      ParentFont = False
+      TabOrder = 1
+      Text = '1'
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 288
+    Height = 149
+    Top = 8
+    Width = 224
+    Caption = 'Options'
+    ClientHeight = 125
+    ClientWidth = 220
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    object radBtn_PrimOnly: TRadioButton
+      Left = 32
+      Height = 22
+      Hint = 'A triple is primitive if the biggest shared divisor of a and b is 1.'
+      Top = 23
+      Width = 166
+      Caption = 'Primitive Triples Only'
+      Checked = True
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      TabStop = True
+    end
+    object radBtn_All: TRadioButton
+      Left = 32
+      Height = 22
+      Top = 76
+      Width = 88
+      Caption = 'All Triples'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 520
+    Height = 45
+    Top = 112
+    Width = 237
+    Caption = 'Time Passed'
+    ClientHeight = 21
+    ClientWidth = 233
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    object labTimePassed: TLabel
+      Left = 0
+      Height = 18
+      Top = 0
+      Width = 232
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '0'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object gbOperations: TGroupBox
+    Left = 520
+    Height = 45
+    Top = 56
+    Width = 237
+    Caption = 'Triples Generated'
+    ClientHeight = 21
+    ClientWidth = 233
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    object labOperations: TLabel
+      Left = 0
+      Height = 18
+      Top = 0
+      Width = 232
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '0'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object btnStartGenerating: TButton
+    Left = 520
+    Height = 40
+    Top = 8
+    Width = 237
+    Caption = 'Start Generating'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Arial Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnStartGeneratingClick
+    ParentFont = False
+    TabOrder = 5
+  end
+  object btnExit: TButton
+    Left = 589
+    Height = 25
+    Top = 568
+    Width = 168
+    Caption = 'Exit'
+    OnClick = btnExitClick
+    TabOrder = 6
+  end
+  object GroupBox4: TGroupBox
+    Left = 8
+    Height = 61
+    Top = 163
+    Width = 748
+    Caption = 'Sorting Options'
+    ClientHeight = 37
+    ClientWidth = 744
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    object radBtn_sortA: TRadioButton
+      Left = 480
+      Height = 22
+      Top = 8
+      Width = 29
+      Caption = 'a'
+      Checked = True
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 3
+      TabStop = True
+      Visible = False
+    end
+    object radBtn_sortB: TRadioButton
+      Left = 568
+      Height = 22
+      Top = 8
+      Width = 29
+      Caption = 'b'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 0
+      Visible = False
+    end
+    object radBtn_sortC: TRadioButton
+      Left = 656
+      Height = 22
+      Top = 8
+      Width = 28
+      Caption = 'c'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 1
+      Visible = False
+    end
+    object cbSort: TCheckBox
+      Left = 56
+      Height = 22
+      Hint = 'Sorts the triples by the chosen value via Quicksort algorithm'
+      Top = 8
+      Width = 123
+      Caption = 'Enable Sorting'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnChange = cbSortChange
+      ParentFont = False
+      TabOrder = 2
+    end
+    object labSortBy: TLabel
+      Left = 384
+      Height = 18
+      Top = 8
+      Width = 53
+      Caption = 'Sort by:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+  end
+end

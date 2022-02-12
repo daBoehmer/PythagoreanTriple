@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.2.0\bin\x86_64-win64\fpc.exe" Date="1381338938"/>
+  <Params Value=" -MObjFPC -Scghi -Cirot -O1 -g -gl -WG -l -vewnhibq &quot;-FiC:\Users\David\Desktop\PythagoreanTriples - A Masterpiece\lib\x86_64-win64&quot; -FuC:\lazarus\lcl\units\x86_64-win64\win32 -FuC:\lazarus\lcl\units\x86_64-win64 -FuC:\lazarus\components\lazutils\lib\x86_64-win64 -FuC:\lazarus\packager\units\x86_64-win64 &quot;-FuC:\Users\David\Desktop\PythagoreanTriples - A Masterpiece\&quot; &quot;-FUC:\Users\David\Desktop\PythagoreanTriples - A Masterpiece\lib\x86_64-win64\&quot; &quot;-FEC:\Users\David\Desktop\PythagoreanTriples - A Masterpiece\&quot; &quot;-oC:\Users\David\Desktop\PythagoreanTriples - A Masterpiece\PythagoreanTripleGenerator.exe&quot; -dLCL -dLCLwin32 PythagoreanTripleGenerator.lpr"/>
+</CONFIG>
